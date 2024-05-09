@@ -1,12 +1,39 @@
 /* Default styles for small screens and anything not caught by media*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 body {
     background:#DED9E2;
     /* font-family: Arial, Helvetica, sans-serif; */
+    
     font-family: "Noto Sans", sans-serif;
 }
-.column {
-  width: 100%;
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: lightsteelblue;
+  border: 5px solid lightslategrey;
+  border-radius: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* h1 {
+  display: inline;
+  background-color:lightsteelblue;
+} */
+
+/* .column {
+  width: 100%;
+} */
 
 /* Styles for screens 600px wide and larger */
 /* @media screen and (min-width: 600px) { */
@@ -14,15 +41,32 @@ body {
     body {
         background-color:#EFE7D3;
     }
-    .column {
+
+    header {
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    main {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 1rem;
+    }
+
+    .main_pa {
+      padding-left: 1rem;
+    }
+
+    /* .column {
       float: left;
       width: 33.33%;
-    }
+    } */
   
   /* Clear floats after the columns */
-  .row:after {
+  /* .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
 }
